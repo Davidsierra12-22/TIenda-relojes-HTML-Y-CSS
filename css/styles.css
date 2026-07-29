@@ -319,7 +319,7 @@
   /* Contenedor e imágenes */
   .img-container {
     width: 100%;
-    height: 180px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,7 +343,6 @@
     margin-bottom: 8px;
     height: 28px; /* Mantiene alineados los títulos de 2 líneas */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -527,7 +526,7 @@
   .img-container {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
