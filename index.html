@@ -1,276 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Store - Relojes de Lujo</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Store - Login</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+    <body class="login-page">
 
-<body class="main-page">
+        <div class="login-card">
+          <div class="logo-box">
+            <!-- REEMPLAZAR CON TU LOGO -->
+            <img src="https://acdn-us.mitiendanube.com/stores/804/588/themes/common/logo-1109339747-1722646705-121a101efdd62d9919ad9bfa200c9b101722646705-480-0.webp" alt="Golden Store Logo" class="logo-placeholder">
+          </div>
+      
+          <h2>Iniciar Sesión</h2>
 
-    <!-- ENCABEZADO -->
-    <header class="main-header">
-        <div class="top-bar">
-            <input type="text" placeholder="Buscar..." class="search-input">
-            <div class="cart-box">
-                🛒 <span>0</span> | $0
+          <a href="carrito.html" class="login-cart-link">Ver carrito de compra</a>
+      
+          <form class="login-form">
+            <div class="input-group">
+              <label for="user">Usuario</label>
+              <input type="text" id="user" placeholder="Ingresa tu usuario" required>
             </div>
+      
+            <div class="input-group">
+              <label for="pass">Contraseña</label>
+              <input type="password" id="pass" placeholder="••••••••" required>
+            </div>
+      
+            <!-- Envía a la pantalla de carga -->
+            <a href="loading.html" class="btn-ingresar">INGRESAR</a>
+          </form>
         </div>
 
-        <div class="nav-container">
-            <div class="logo-box">
-                <!-- REEMPLAZAR CON TU LOGO -->
-                <img src="https://acdn-us.mitiendanube.com/stores/804/588/themes/common/logo-1109339747-1722646705-121a101efdd62d9919ad9bfa200c9b101722646705-480-0.webp"
-                    alt="Golden Store Logo" class="logo-placeholder-small">
-            </div>
-            <nav class="nav-links">
-                <a href="productos.html">PRODUCTOS</a>
-                <a href="hombre.html">HOMBRE</a>
-                <a href="mujer.html">MUJER</a>
-                <a href="parejas.html">PAREJAS</a>
-                <a href="smartwatch.html">SMARTWATCH</a>
-                <a href="ninos.html">NIÑOS</a>
-            </nav>
-        </div>
+            
 
-        <div class="announcement-bar">
-            LÍDERES EN VENTA ONLINE DESDE 2012 | RELOJES ORIGINALES CON GARANTÍA
-        </div>
-    </header>
-
-    <!-- BANNER PRINCIPAL CON VIDEO -->
-    <section class="hero-banner">
-        <div class="banner-video-container">
-            <!-- Reemplaza 'video-reloj.mp4' por la ruta de tu video descargado -->
-            <video autoplay muted loop playsinline class="banner-video">
-                <source src="img y videos/video del baner1.mp4" type="video/mp4">
-            </video>
-            <div class="banner-overlay">
-                <h2>ELEGANCIA Y PRECISIÓN EN CADA SEGUNDO</h2>
-                <p>Descubre la nueva colección de relojes de lujo</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CATEGORÍAS PRINCIPALES -->
-    <section class="categories-section">
-        <h2>Categorías principales</h2>
-        <div class="category-grid">
-            <a href="hombre.html"><button>RELOJES HOMBRE</button></a>
-            <a href="mujer.html"><button>RELOJES MUJER</button></a>
-            <a href="liquidacion.html"><button>LIQUIDACIÓN DE RELOJES</button></a>
-            <a href="parejas.html"><button>RELOJES DE PAREJAS</button></a>
-            <a href="ninos.html"><button>RELOJES NIÑOS</button></a>
-            <a href="smartwatch.html"><button>SMARTWATCH</button></a>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
-    <section class="products-section">
-        <!-- Banner de texto intermedio -->
-        <div class="banner-info">
-            <p>OFRECEMOS RELOJES DE LUJO PARA HOMBRES Y MUJERES CON LAS MEJORES MARCAS A NIVEL MUNDIAL, RESPALDADOS POR
-                UN SERVICIO TÉCNICO ESPECIALIZADO Y AUTORIZADO, GARANTIZANDO PRODUCTOS 100% AUTÉNTICOS.</p>
-        </div>
-
-        <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
-
-        <!-- GRID DE 10 PRODUCTOS (2 FILAS X 5 COLUMNAS) -->
-        <div class="products-grid">
-
-            <!-- Tarjeta 1 -->
-            <div class="product-card">
-                <span class="discount-badge">32% OFF</span>
-                <div class="img-container">
-                    <!-- Espacio marcado para tu foto -->
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/5464894-3-485594ab2aad07e55a17599570785287-1024-1024.webp"
-                        alt="Reloj Kosmo K795E" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO K795E AUTOMATICO</h3>
-                <div class="product-price">
-                    <span class="old-price">$250.000</span>
-                    <span class="current-price">$169.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 2 -->
-            <div class="product-card">
-                <span class="discount-badge">34% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/mt1009-1-7d71318b96ad6e73a617600566812181-640-01-484c6f9e5a33d0035517604871776343-320-0.webp"
-                        alt="Reloj Kosmo Ruleta Casino" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO RULETA CASINO K2058G</h3>
-                <div class="product-price">
-                    <span class="old-price">$350.000</span>
-                    <span class="current-price">$229.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 3 -->
-            <div class="product-card">
-                <span class="discount-badge">32% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/5464894-2-9d4c5bad5b0ba0a00817599570619394-320-0.webp"
-                        alt="Reloj Kosmo K795E" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO K795E AUTOMATICO</h3>
-                <div class="product-price">
-                    <span class="old-price">$250.000</span>
-                    <span class="current-price">$169.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 4 -->
-            <div class="product-card">
-                <span class="discount-badge">32% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/5464894-1-ce02cc224b5d633dd817599569428367-320-0.webp"
-                        alt="Reloj Kosmo K795E" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO K795E AUTOMATICO</h3>
-                <div class="product-price">
-                    <span class="old-price">$250.000</span>
-                    <span class="current-price">$169.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 5 -->
-            <div class="product-card">
-                <span class="discount-badge">23% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/mts-115d-2a1v1-ef035276d5104d1dc017598817472560-320-0.webp"
-                        alt="Reloj Casio MTS-115D" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ CASIO MTS-115D-2A1V</h3>
-                <div class="product-price">
-                    <span class="old-price">$455.000</span>
-                    <span class="current-price">$349.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 6 -->
-            <div class="product-card">
-                <span class="discount-badge">22% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/mtp-1370g-1av1-8e84335b30bfa646cb17591162403147-320-0.webp"
-                        alt="Reloj Casio MTP-1370G" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ CASIO MTP-1370G-1AV</h3>
-                <div class="product-price">
-                    <span class="old-price">$475.000</span>
-                    <span class="current-price">$369.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 7 -->
-            <div class="product-card">
-                <span class="discount-badge">22% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/4864866-3-079ec9b828c55a708017617956526848-320-0.webp"
-                        alt="Reloj Kosmo Ruleta" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO RULETA NEGRO</h3>
-                <div class="product-price">
-                    <span class="old-price">$320.000</span>
-                    <span class="current-price">$249.900</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 8 -->
-            <div class="product-card">
-                <span class="discount-badge">25% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/4864866-2-314542e324bf3ab77917617958418824-320-0.webp"
-                        alt="Reloj Skeleton Dorado" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO SKELETON GOLD</h3>
-                <div class="product-price">
-                    <span class="old-price">$500.000</span>
-                    <span class="current-price">$375.000</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 9 -->
-            <div class="product-card">
-                <span class="discount-badge">23% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/1002523656-f0d60dac17139f8da917846883118616-320-0.webp"
-                        alt="Reloj Skeleton Rose Gold" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO SKELETON ROSE</h3>
-                <div class="product-price">
-                    <span class="old-price">$490.000</span>
-                    <span class="current-price">$377.300</span>
-                </div>
-            </div>
-
-            <!-- Tarjeta 10 -->
-            <div class="product-card">
-                <span class="discount-badge">24% OFF</span>
-                <div class="img-container">
-                    <img src="https://acdn-us.mitiendanube.com/stores/804/588/products/9831e-0520-2-74c8d9e405bc6cef3e17617970070273-320-0.webp"
-                        alt="Reloj Kosmo Sport" class="product-img-placeholder">
-                </div>
-                <h3 class="product-title">RELOJ KOSMO SPORT GREEN</h3>
-                <div class="product-price">
-                    <span class="old-price">$290.000</span>
-                    <span class="current-price">$220.000</span>
-                </div>
-            </div>
-
-        </div>
-        </section>
-
-<!-- FOOTER: consistent across pages -->
-<footer class="site-footer">
-    <div class="footer-top">
-        <div class="footer-newsletter">
-            <h4>NEWSLETTER</h4>
-            <form class="newsletter-form" action="#">
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Tu Email">
-                <button type="submit">&gt;</button>
-            </form>
-        </div>
-        <div class="footer-social">
-            <h4>REDES SOCIALES</h4>
-            <div class="social-icons">
-                <span>📷</span>
-                <span>👍</span>
-                <span>💬</span>
-            </div>
-        </div>
-        <div class="footer-contact">
-            <h4>CONTACTANOS</h4>
-            <p>+57 316 882 8925 Whatsapp | relojesgolden@relojesgolden.com</p>
-        </div>
-    </div>
-    <div class="footer-nav">
-        <a href="productos.html">PRODUCTOS</a>
-        <a href="hombre.html">HOMBRE</a>
-        <a href="mujer.html">MUJER</a>
-        <a href="parejas.html">PAREJAS</a>
-        <a href="smartwatch.html">SMARTWATCH</a>
-        <a href="ninos.html">NIÑOS</a>
-    </div>
-    <div class="footer-payments">
-        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" alt="visa">
-        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" alt="mastercard">
-        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" alt="amex">
-    </div>
-        <div class="bottom-bar">
-            Copyright GOLDEN STORE - 2026. Todos los derechos reservados.
-            <img src="https://via.placeholder.com/140x22?text=tiendanube" alt="creado con tiendanube">
-        </div>
-</footer>
-
-
-<!-- Floating WhatsApp button (site-wide) -->
-<a href="https://wa.me/573168828925" class="whatsapp-float" target="_blank" rel="noopener">📲</a>
-
-</body>
-
-</html>
+            </body>
+      </html>

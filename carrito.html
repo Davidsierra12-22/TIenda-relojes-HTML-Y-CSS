@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi carrito | Golden Store</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="cart-view">
+  <header class="main-header">
+    <div class="top-bar">
+      <a class="cart-brand" href="home.html" aria-label="Ir al inicio de Golden Store">GOLDEN STORE</a>
+      <div class="cart-box cart-box-current" aria-label="Carrito con dos productos">🛒 <span>2</span> | $1.548.000</div>
+    </div>
+    <div class="nav-container">
+      <div class="logo-box">
+        <a href="home.html"><img src="https://acdn-us.mitiendanube.com/stores/804/588/themes/common/logo-1109339747-1722646705-121a101efdd62d9919ad9bfa200c9b101722646705-480-0.webp" alt="Golden Store" class="logo-placeholder-small"></a>
+      </div>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="hombre.html">HOMBRE</a>
+        <a href="mujer.html">MUJER</a>
+        <a href="parejas.html">PAREJAS</a>
+        <a href="smartwatch.html">SMARTWATCH</a>
+        <a href="ninos.html">NIÑOS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shopping-cart">
+    <div class="cart-heading">
+      <div>
+        <p class="cart-eyebrow">RESUMEN DE COMPRA</p>
+        <h1>Mi carrito</h1>
+        <p>2 productos seleccionados</p>
+      </div>
+      <a class="cart-continue" href="productos.html">← Seguir comprando</a>
+    </div>
+
+    <div class="cart-layout">
+      <section class="cart-products" aria-label="Productos del carrito">
+        <div class="cart-column-headings"><span>PRODUCTO</span><span>PRECIO</span><span>CANTIDAD</span><span>SUBTOTAL</span></div>
+
+        <article class="cart-product">
+          <img src="https://luxus.com.co/wp-content/uploads/2023/05/2-1.png" alt="Reloj metálico dorado" class="cart-product-image">
+          <div class="cart-product-info"><h2>Reloj clásico dorado</h2><p>Ref. GS-1024 · Correa metálica</p><button type="button" class="cart-remove">Eliminar</button></div>
+          <strong class="cart-price">$899.000</strong>
+          <div class="quantity-control" aria-label="Cantidad de reloj clásico dorado"><button type="button">−</button><span>1</span><button type="button">+</button></div>
+          <strong class="cart-subtotal">$899.000</strong>
+        </article>
+
+        <article class="cart-product">
+          <img src="https://www.pulsocol.com/cdn/shop/files/825_plata_azul.png?v=1782242261&amp;width=533" alt="Reloj plateado con esfera azul" class="cart-product-image">
+          <div class="cart-product-info"><h2>Reloj acero azul</h2><p>Ref. GS-2088 · Cristal mineral</p><button type="button" class="cart-remove">Eliminar</button></div>
+          <strong class="cart-price">$649.000</strong>
+          <div class="quantity-control" aria-label="Cantidad de reloj acero azul"><button type="button">−</button><span>1</span><button type="button">+</button></div>
+          <strong class="cart-subtotal">$649.000</strong>
+        </article>
+      </section>
+
+      <aside class="order-summary">
+        <h2>Resumen del pedido</h2>
+        <div class="summary-row"><span>Subtotal</span><strong>$1.548.000</strong></div>
+        <div class="summary-row"><span>Envío</span><strong>Gratis</strong></div>
+        <div class="summary-total"><span>Total</span><strong>$1.548.000</strong></div>
+        <small>Impuestos incluidos. El envío se calcula al finalizar.</small>
+        <button type="button" class="checkout-button">FINALIZAR COMPRA</button>
+        <p class="cart-static-note">Vista de demostración · sin funciones de compra activas.</p>
+        <div class="cart-benefits"><span>✓ Compra segura</span><span>✓ Envíos a todo el país</span><span>✓ Garantía en productos originales</span></div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
