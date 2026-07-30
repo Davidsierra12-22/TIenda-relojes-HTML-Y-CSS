@@ -170,6 +170,10 @@
   .main-header {
     background: #181818;
     border-bottom: 1px solid #333;
+    position: sticky; /* Mantener el header visible */
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.25s ease; /* preparado para hide-on-scroll con JS opcional */
   }
   
   .top-bar {
@@ -251,17 +255,17 @@
    5. SECCIÓN DE PRODUCTOS (GRID DE 5 COLUMNAS)
    ========================================== */
 .products-section {
-    background-color: #ffffff; /* Fondo blanco igual a la imagen original */
-    color: #333;
-    padding-bottom: 50px;
+  background-color: #ffffff; /* Fondo blanco igual a la imagen original */
+  color: #333;
+  padding: 40px 0; /* espacio arriba y abajo para evitar cortes negros */
   }
   
   /* Banner de texto informativo en fondo negro */
   .banner-info {
-    background-color: #0d0d0d;
-    color: #ffffff;
+    background-color: transparent; /* evitar franja negra entre secciones */
+    color: #555;
     text-align: center;
-    padding: 30px 10%;
+    padding: 20px 10%;
     font-size: 0.85rem;
     line-height: 1.6;
     letter-spacing: 1px;
@@ -300,7 +304,7 @@
   }
   
   .product-card:hover {
-    transform: translateY(-4px); /* Efecto elevación al pasar el ratón */
+    transform: none; /* Sin elevación */
   }
   
   /* Badge / Etiqueta de Descuento en la esquina */
@@ -327,11 +331,11 @@
     margin-bottom: 15px;
   }
   
-  .product-img-placeholder {
+    .product-img-placeholder {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
-    border: 1px  #ccc; /* Guía para ver el espacio de la foto */
+    border: 1px solid #ccc; /* Guía para ver el espacio de la foto */
     padding: 4px;
   }
   
@@ -352,6 +356,51 @@
     font-size: 0.75rem;
     font-weight: bold;
   }
+
+  .product-link { display:inline-block; margin-top:8px; background:#b8860b; color:#000; padding:6px 10px; text-decoration:none; font-weight:700; border-radius:3px; }
+  .product-link:hover { background:#d4af37; }
+
+  /* Card hover (subtle) and modal-open scale handled by JS animation */
+  .product-card {
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+  .product-card:hover {
+    transform: none;
+    box-shadow: none;
+    z-index: auto;
+  }
+
+  /* Simple hover overlay showing small specs using data-specs attribute (no JS) */
+  .product-card { position: relative; overflow: visible; }
+  .product-card::after {
+    content: attr(data-specs);
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(255,255,255,0.95);
+    color: #222;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.83rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    pointer-events: none;
+  }
+  .product-card:hover::after { opacity: 1; transform: translateY(0); }
+
+  /* Image lift on hover to make elevation more visible (subtle) */
+  .product-img-placeholder { transition: transform 260ms ease, box-shadow 260ms ease; }
+  .product-card:hover .product-img-placeholder { transform: none; box-shadow: none; }
+
+  /* Button micro-elevation (subtle) */
+  .product-link { transition: transform 160ms ease, box-shadow 160ms ease; }
+  .product-link:hover { transform: none; box-shadow: none; }
+
+  /* Modal CSS removed for static mockup (no JS) */
+
   
   .old-price {
     color: #aaa;
@@ -557,3 +606,87 @@
     opacity: 1; /* Aparece la segunda */
     transform: translateX(-50%) scale(1.05); /* Efecto leve de zoom */
   }
+
+/* ==========================================
+   FOOTER GLOBAL Y DECORACIONES ANIMADAS
+   ========================================== */
+.site-footer {
+  background: #d6d4d3; /* gris claro como en la imagen */
+  color: #222;
+  padding: 40px 5% 20px;
+  font-size: 0.95rem;
+}
+.site-footer a { color: inherit; text-decoration: none; }
+.footer-top {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+}
+.footer-newsletter, .footer-social, .footer-contact {
+  flex: 1 1 30%;
+}
+.footer-newsletter h4, .footer-social h4, .footer-contact h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.newsletter-form { display:flex; gap:8px; }
+.newsletter-form input { padding:10px; border:1px solid #bbb; background:#fff; flex:1; }
+.newsletter-form button { background:#111; color:#fff; border:none; padding:10px 14px; cursor:pointer; }
+.footer-nav { text-align:center; padding:14px 0; border-top:1px solid rgba(0,0,0,0.08); border-bottom:1px solid rgba(0,0,0,0.04); background:transparent; }
+.footer-nav a { margin:0 10px; font-size:0.85rem; color:#222; }
+.footer-payments { display:flex; justify-content:center; gap:12px; padding:16px 0; }
+.footer-bottom { text-align:center; padding:12px 0 0; font-size:0.85rem; color:#111; }
+
+/* Footer: remove decorative animations to match provided design */
+.footer-contact p { border-top:1px solid rgba(0,0,0,0.12); padding-top:8px; margin-top:6px; }
+.footer-contact p + p { border-top:none; padding-top:6px; }
+
+/* Dark bottom bar like the screenshot */
+.site-footer .bottom-bar {
+  background:#2f2b2a;
+  color:#fff;
+  text-align:center;
+  padding:14px 5%;
+  margin-top:12px;
+  font-size:0.85rem;
+}
+.site-footer .bottom-bar img{ display:block; margin:6px auto 0; height:22px; opacity:0.95 }
+
+/* Small pulsing social icons */
+.social-icons span { display:inline-block; margin-right:8px; padding:8px; border-radius:6px; background:#fff; }
+.social-icons span:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.12); transition:0.25s; }
+
+@media (max-width:800px){
+  .footer-top{ flex-direction:column; gap:16px; }
+  .footer-newsletter, .footer-social, .footer-contact{ width:100%; }
+  .products-grid{ grid-template-columns: repeat(2,1fr);} 
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 2000;
+  text-decoration: none;
+  font-size: 24px;
+}
+.whatsapp-float:hover { transform: translateY(-4px); transition: transform 0.18s ease; }
+
+@media (max-width:480px){
+  .whatsapp-float { width:48px; height:48px; font-size:20px; bottom:16px; right:16px; }
+}
