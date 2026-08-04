@@ -933,18 +933,12 @@ body {
 }
 
 .footer-top {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
   max-width: 1200px;
   margin: 0 auto 20px;
-}
-
-.footer-newsletter,
-.footer-social,
-.footer-contact {
-  flex: 1 1 30%;
 }
 
 .footer-newsletter h4,
@@ -977,17 +971,31 @@ body {
 }
 
 .footer-nav {
-  text-align: center;
-  padding: 14px 0;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+  gap: 8px 20px;
+  padding: 16px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   background: transparent;
 }
 
 .footer-nav a {
-  margin: 0 10px;
   font-size: 0.85rem;
   color: #222;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .footer-payments {
@@ -1031,16 +1039,16 @@ body {
   opacity: 0.95;
 }
 
-.social-icons span {
+.social-icons a {
   display: inline-block;
-  margin-right: 8px;
   padding: 8px;
   border-radius: 6px;
   background: #fff;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.social-icons span:hover {
+.social-icons a:hover,
+.social-icons a:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
@@ -1086,14 +1094,20 @@ body {
 
 @media (max-width: 800px) {
   .footer-top {
-    flex-direction: column;
-    gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .footer-newsletter,
-  .footer-social,
-  .footer-contact {
-    width: 100%;
+  .footer-nav {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-nav {
+    grid-template-columns: 1fr;
+    justify-content: start;
+    gap: 12px;
   }
 }
 
