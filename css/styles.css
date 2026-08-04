@@ -943,11 +943,16 @@ body {
 
 .footer-newsletter h4,
 .footer-social h4,
-.footer-contact h4 {
+.footer-contact h4,
+.footer-marcas h4 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
   margin-bottom: 12px;
+}
+.marcas{
+  display: flex;
+  flex-direction: row;
 }
 
 .newsletter-form {
